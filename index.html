@@ -67,173 +67,17 @@
                width: 100%;
                height: 100%;
             }
-            div.container
-            {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                font-family: verdana;
-                margin-bottom: 5em;
-                margin-top: 700px;
-            }
-            div.instructions
-            {
-                margin-top: 2em;
-                margin-left: 5em;
-                margin-right: 5em;
-            }
-            div.indent
-            {
-                padding-left: 2em;
-            }
-            img.images {
-                width: 200px;
-            }
         </style>
     </head>
 
     <body>
         <div class="gm4html5_div_class" id="gm4html5_div_id">
             <!-- Create the canvas element the game draws to -->
-            <!-- style="position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; transform: translate(-50%, -50%);"-->
-            <canvas id="canvas" width="800" height="600" style="position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; transform: translate(-50%, -50%);" >
+            <canvas id="canvas" width="800" height="600"  style="position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; transform: translate(-50%, -50%);" >
                      <p>Your browser doesn't support HTML5 canvas.</p>
             </canvas>
         </div>
-        <div class="container">
-            <div style="color: black">
-                <h1>Isometric Ship Battle Game</h1>
-            </div>
-            <div class="instructions" style="color: black">
-                <h2>How to Play</h1>
-                <h3>Winning and Losing</h3>
-                <div class="indent">
-                    <p>
-                        If you deplete the enemy ship health bar you win.
-                    </p>
-                    <p>
-                        If your health bar is depleted you lose.
-                    </p>
-                    <p>
-                        Both the player and enemy ships can sustain 10 hits.
-                    </p>
-                    <p>
-                        You can fire cannons at the enemy ship and the enemy ship will fire
-                        cannons at you. Each successful hit will remove 1 hit point  from the
-                        respective ship.
-                    </p>
-                    <p>
-                        Colliding with the enemy ship will deduct one hit point from <b>both</b>
-                        ships.
-                    <p>
-                        <i style="font-size: 0.8em">
-                        Protip: Colliding with the enemy ship will stall their movement
-                        for the rest of the turn, but will not stall your ship. (This helps
-                        keep the game balanced.)
-                        </i>
-                    </p>
-                    </p>
-                    <p>
-                        Each collision with the edge of the gameboard will deduct 1 hit point.
-                    </p>
-                </div>
-                <h3>Movement</h3>
-                <div class="indent">
-                    <p>
-                        You can click and drag the arrows in the bottom left of the screen to place
-                        them on the different move positions.
-                    </p>
-                    <p>
-                        After selecting your moves, press the ready button.
-                    </p>
-                    <p>
-                        Each of your four moves will individually execute at the same time as each of
-                        the enemy ships four moves.
-                    </p>
-                    <p>
-                        <i style="font-size: 0.8em">
-                        Protip: You don't have to fill every space. If you click <b>Ready</b>
-                        and you
-                        have left any of the movement placeholders empty, your ship will chill
-                        for that phase of the movement round (be careful though, because the
-                        enemy ship will still move [unless they have been stalled, see protip
-                        above]).
-                        </i>
-                    </p>
-                    <img class="images" src="images/movement.png" />
-                </div>
-                <h4>Movement Types</h4>
-                <div class="indent">
-                    <h5>Forward</h5>
-                    <p>
-                        Selecting forward will move your ship forward one space.
-                    </p>
-                    <h5>Left / Right</h5>
-                    <p>
-                        Turning your ship is a little less straight-forward (pun definitely intended).
-                    </p>
-                    <p>
-                        Your ship will first move one space forward, then one space in the selected
-                        direction (i.e. left or right).
-                    </p>
-                </div>
-                <h3>Cannons</h3>
-                <div class="indent">
-                    <p>
-                        You can fire up to two cannons at the end of each individual movement,
-                        one on each side of your ship.
-                    </p>
-                    <p>
-                        You can specify which cannons you would like to fire by clicking
-                        the circles next to the move placeholders.
-                    </p>
-                    <img class="images" src="images/cannons.png" />
-                    <p>
-                        Cannons always fire in a straight line with a maximum range of 3 tiles.
-                    </p>
-                    <p>
-                        You can fire up to four cannons per turn, and your ship will automatically
-                        reload two cannons at the end of each turn.
-                    </p>
-                    <p>
-                        You can keep track of how many cannons you have available by checking
-                        under the player health bar.
-                    </p>
-                    <img class="images" src="images/cannon_marker.png" />
-                    <p>
-                        Your enemy also has a four cannon limit per turn, but they do not reload
-                        their cannons until all four have been expended. This design choice
-                        helps to balance the game.
-                    </p>
-                </div>
-                <h3>Reporting Bugs</h3>
-                <div>
-                    If you are playing this you probably know me personally. If you would like
-                    to report a bug just let me know.
-                </div>
-                <h2>Credits</h2>
-                <div class="indent">
-                    <p>
-                        This game was heavily inspired by one of the puzzles in the video game
-                        Puzzle Pirates©.
-                    </p>
-                    <p>
-                        All music and sound effects are public domain.
-                    </p>
-                    <p>
-                        All pixel art was created by Jake Krebs.
-                    </p>
-                    <p>
-                        <i>
-                            Some of the fonts are modified versions of public domain fonts.
-                        </i>
-                    </p>
-                    <p>
-                        The game was developed by Jake Krebs using the GameMaker Studio 2 engine.
-                    </p>
-                </div>
-            </div>
-        </div>
+
         <!-- Run the game code -->
         <script type="text/javascript" src="html5game/ship-battle.js?DVCZB=1175915586"></script>
         <script>window.onload = GameMaker_Init;</script>
